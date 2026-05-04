@@ -5,7 +5,6 @@
 
 <b>Privacy & Security Awareness</b>
 
-<h2>Your Username
-Is a Weapon</h2>
+<h2>More Info Visit <a href="https://abccompanypoharka.github.io/"> abccompanypoharka.github.io</a></h2>
 
 
