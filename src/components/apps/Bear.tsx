@@ -7,6 +7,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula, prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 import bear from "~/configs/bear";
 import type { BearMdData } from "~/types";
+import HackerText from "~/components/HackerText";
 
 interface ContentProps {
   contentID: string;
@@ -52,6 +53,30 @@ const Highlighter = (dark: boolean): any => {
         </SyntaxHighlighter>
       ) : (
         <code className={className}>{children}</code>
+      );
+    },
+    h1({ node, children, ...props }: any) {
+      return <HackerText {...props}>{children}</HackerText>;
+    },
+    h2({ node, children, ...props }: any) {
+      return (
+        <HackerText {...props} tag="h2" className="text-2xl font-bold">
+          {children}
+        </HackerText>
+      );
+    },
+    h3({ node, children, ...props }: any) {
+      return (
+        <HackerText {...props} tag="h3" className="text-xl font-bold">
+          {children}
+        </HackerText>
+      );
+    },
+    strong({ node, children, ...props }: any) {
+      return (
+        <HackerText {...props} tag="strong" className="font-bold">
+          {children}
+        </HackerText>
       );
     }
   };
