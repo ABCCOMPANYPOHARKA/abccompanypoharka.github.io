@@ -29,11 +29,7 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
   const [text, setText] = useState(originalText);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
-    setText(originalText);
-  }, [originalText]);
-
-  const handleMouseOver = () => {
+  const triggerEffect = () => {
     let iteration = 0;
 
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -59,10 +55,17 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
     }, 30);
   };
 
+  useEffect(() => {
+    triggerEffect();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [originalText]);
+
   return (
     <Tag
       {...props}
-      onMouseOver={handleMouseOver}
+      onMouseOver={triggerEffect}
       data-value={originalText}
       className={`font-mono cursor-pointer transition-colors duration-300 rounded px-2 py-1 inline-block hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black ${props.className || ""}`}
     >

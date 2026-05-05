@@ -78,6 +78,13 @@ const Highlighter = (dark: boolean): any => {
           {children}
         </HackerText>
       );
+    },
+    p({ node, children, ...props }: any) {
+      return (
+        <HackerText {...props} tag="p">
+          {children}
+        </HackerText>
+      );
     }
   };
 };
@@ -98,7 +105,9 @@ const Sidebar = ({ cur, setMidBar }: SidebarProps) => {
             onClick={() => setMidBar(item.md, index)}
           >
             <span className={item.icon} />
-            <span className="ml-2">{item.title}</span>
+            <span className="ml-2">
+              <HackerText tag="span">{item.title}</HackerText>
+            </span>
           </li>
         ))}
       </ul>
@@ -123,7 +132,7 @@ const Middlebar = ({ items, cur, setContent }: MiddlebarProps) => {
               <span className={item.icon} />
             </div>
             <span className="relative flex-1 font-bold" text="gray-900 dark:gray-100">
-              {item.title}
+              <HackerText tag="span">{item.title}</HackerText>
               {item.link && (
                 <a
                   pos="absolute top-1 right-4"
@@ -137,7 +146,7 @@ const Middlebar = ({ items, cur, setContent }: MiddlebarProps) => {
             </span>
           </div>
           <div className="flex-1 ml-10" p="b-2 r-1" text="sm c-500" border="b c-300">
-            {item.excerpt}
+            <HackerText tag="p">{item.excerpt}</HackerText>
           </div>
         </li>
       ))}

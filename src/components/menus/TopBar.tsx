@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import HackerText from "~/components/HackerText";
 import { isFullScreen } from "~/utils";
 import { music } from "~/configs";
 import type { MacActions } from "~/types";
@@ -181,7 +182,7 @@ const TopBar = (props: TopBarProps) => {
             if (state.showAppleMenu) toggleAppleMenu();
           }}
         >
-          {props.title}
+          <HackerText tag="span">{props.title}</HackerText>
         </TopBarItem>
       </div>
 
@@ -242,8 +243,12 @@ const TopBar = (props: TopBarProps) => {
         )}
 
         <TopBarItem>
-          <span>{format(state.date, "eee MMM d")}</span>
-          <span>{format(state.date, "h:mm aa")}</span>
+          <span>
+            <HackerText tag="span">{format(state.date, "eee MMM d")}</HackerText>
+          </span>
+          <span>
+            <HackerText tag="span">{format(state.date, "h:mm aa")}</HackerText>
+          </span>
         </TopBarItem>
       </div>
     </div>
