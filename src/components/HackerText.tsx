@@ -65,9 +65,8 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
   return (
     <Tag
       {...props}
-      onMouseOver={triggerEffect}
       data-value={originalText}
-      className={`font-mono cursor-pointer transition-colors duration-300 rounded px-2 py-1 inline-block hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black ${props.className || ""}`}
+      className={`font-mono inline-block ${props.className || ""}`}
     >
       {text}
     </Tag>
