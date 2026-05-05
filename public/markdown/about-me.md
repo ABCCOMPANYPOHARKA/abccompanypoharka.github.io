@@ -1,6 +1,6 @@
 # About Me
 
-I Am <b>THE GODFATHER</b>
+I Am THE GODFATHER
 for your digital world.
 
-<img src="https://github.com/ABCCOMPANYPOHARKA/abccompanypoharka.github.io/blob/main/public/img/ui/godfather.jpeg">
+<img src="http://raw.githubusercontent.com/ABCCOMPANYPOHARKA/UCL-Aadhar-Software-AutoClose-Fix/refs/heads/main/Capture1.JPG" height="250" weight="250">
