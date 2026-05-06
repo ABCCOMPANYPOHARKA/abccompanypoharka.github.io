@@ -53,7 +53,7 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
       }
 
       iteration += 1;
-    }, 20);
+    }, 15);
   };
 
   useEffect(() => {
