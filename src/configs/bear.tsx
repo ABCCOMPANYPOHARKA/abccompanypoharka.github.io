@@ -31,7 +31,7 @@ const bear: BearData[] = [
   },
   {
     id: "project",
-    title: "Our AIMs & Weapons",
+    title: "Our AIMs&Weapons",
     icon: "i-octicon:repo",
     md: [
       {
