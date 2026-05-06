@@ -28,6 +28,7 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
   const originalText = extractText(children);
   const [text, setText] = useState(originalText);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const hasAnimated = useRef(false);
 
   const triggerEffect = () => {
     let iteration = 0;
@@ -51,12 +52,18 @@ const HackerText = ({ children, tag: Tag = "h1", ...props }: HackerTextProps) =>
         if (intervalRef.current) clearInterval(intervalRef.current);
       }
 
-      iteration += 1 / 3;
-    }, 30);
+      iteration += 1;
+    }, 20);
   };
 
   useEffect(() => {
-    triggerEffect();
+    if (!hasAnimated.current) {
+      triggerEffect();
+      hasAnimated.current = true;
+    } else {
+      setText(originalText);
+    }
+
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
