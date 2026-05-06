@@ -11,7 +11,7 @@ const bear: BearData[] = [
         title: "About Me",
         file: "markdown/about-me.md",
         icon: "i-la:dragon",
-        excerpt: "Hey there! I'm a Multi Talented Person (Ignore If You Can't Digest.),..."
+        excerpt: "Hey there! I'm a Multi Talented Person (Ignore If You Can't Digest.).."
       },
       {
         id: "github-stats",
@@ -37,8 +37,13 @@ const bear: BearData[] = [
       {
         id: "flint",
         title: "ABC PRIVACY PROTECTION",
+        icon: "i-heroicons-solid:fire",
+        excerpt: "Prevention Is Cure In Digital Life",
 
       },
+
+
+
 
     ]
   }
