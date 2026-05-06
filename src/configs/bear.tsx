@@ -39,7 +39,7 @@ const bear: BearData[] = [
         title: "ABC PRIVACY PROTECTION",
         icon: "i-heroicons-solid:fire",
         excerpt: "Prevention Is Cure In Digital Life",
-
+        file: "markdown/abc.md",
       },
 
 
