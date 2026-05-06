@@ -39,6 +39,14 @@ const Highlighter = (dark: boolean): any => {
     children: any;
   }
 
+  const isSimpleText = (children: any): boolean => {
+    if (typeof children === "string" || typeof children === "number") return true;
+    if (Array.isArray(children)) {
+      return children.every((child) => typeof child === "string" || typeof child === "number");
+    }
+    return false;
+  };
+
   return {
     code({ node, inline, className, children, ...props }: codeProps) {
       const match = /language-(\w+)/.exec(className || "");
@@ -56,34 +64,52 @@ const Highlighter = (dark: boolean): any => {
       );
     },
     h1({ node, children, ...props }: any) {
-      return <HackerText {...props}>{children}</HackerText>;
+      return isSimpleText(children) ? (
+        <HackerText {...props}>{children}</HackerText>
+      ) : (
+        <h1 {...props}>{children}</h1>
+      );
     },
     h2({ node, children, ...props }: any) {
-      return (
+      return isSimpleText(children) ? (
         <HackerText {...props} tag="h2" className="text-2xl font-bold">
           {children}
         </HackerText>
+      ) : (
+        <h2 {...props} className="text-2xl font-bold">
+          {children}
+        </h2>
       );
     },
     h3({ node, children, ...props }: any) {
-      return (
+      return isSimpleText(children) ? (
         <HackerText {...props} tag="h3" className="text-xl font-bold">
           {children}
         </HackerText>
+      ) : (
+        <h3 {...props} className="text-xl font-bold">
+          {children}
+        </h3>
       );
     },
     strong({ node, children, ...props }: any) {
-      return (
+      return isSimpleText(children) ? (
         <HackerText {...props} tag="strong" className="font-bold">
           {children}
         </HackerText>
+      ) : (
+        <strong {...props} className="font-bold">
+          {children}
+        </strong>
       );
     },
     p({ node, children, ...props }: any) {
-      return (
+      return isSimpleText(children) ? (
         <HackerText {...props} tag="p">
           {children}
         </HackerText>
+      ) : (
+        <p {...props}>{children}</p>
       );
     }
   };
