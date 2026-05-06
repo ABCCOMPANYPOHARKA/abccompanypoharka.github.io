@@ -80,10 +80,6 @@ const Highlighter = (dark: boolean): any => {
       );
     },
     p({ node, children, ...props }: any) {
-      const isImg = React.Children.toArray(children).some(
-        (child: any) => child.type === "img"
-      );
-      if (isImg) return <p {...props}>{children}</p>;
       return (
         <HackerText {...props} tag="p">
           {children}
