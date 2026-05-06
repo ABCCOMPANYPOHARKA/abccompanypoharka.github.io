@@ -11,21 +11,21 @@ const bear: BearData[] = [
         title: "About Me",
         file: "markdown/about-me.md",
         icon: "i-la:dragon",
-        excerpt: "Hey there! I'm a CyberSecurity Expert & I protect you from noobs..."
+        excerpt: "Hey there! I'm a Multi Talented Person (Ignore If You Can't Digest.),..."
       },
       {
         id: "github-stats",
-        title: "Github Stats",
+        title: "My ABC Team",
         file: "markdown/github-stats.md",
         icon: "i-icon-park-outline:github",
-        excerpt: "Here are some status about my github account..."
+        excerpt: "We protect you from noobs..."
       },
       {
         id: "about-site",
         title: "About This Site",
         file: "markdown/about-site.md",
         icon: "i-octicon:browser",
-        excerpt: "Something about this personal portfolio site..."
+        excerpt: "Something about for Privacy & Security Awareness..."
       }
     ]
   },
