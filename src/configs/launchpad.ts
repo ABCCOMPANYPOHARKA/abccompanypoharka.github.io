@@ -15,15 +15,15 @@ const launchpadApps: LaunchpadData[] = [
   },
   {
     id: "oh-vue-icons",
-    title: "Oh, Vue Icons!",
-    img: "/img/icons/launchpad/oh-vue-icons.png",
-    link: "https://oh-vue-icons.js.org"
+    title: "UnGoogle Chrome",
+    img: "/img/icons/launchpad/ungoogle.png",
+    link: "https://github.com/ungoogled-software/ungoogled-chromium"
   },
   {
     id: "gungnir",
-    title: "Gungnir",
-    img: "/img/icons/launchpad/gungnir.png",
-    link: "https://vuepress-theme-gungnir.vercel.app/"
+    title: "Adguard",
+    img: "/img/icons/launchpad/adg.png",
+    link: "https://adguard.com/en/welcome.html"
   },
  
   {
