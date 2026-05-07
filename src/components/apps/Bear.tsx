@@ -114,8 +114,13 @@ const Highlighter = (dark: boolean): any => {
     },
     a({ node, children, ...props }: any) {
       return (
-        <a {...props} target="_blank" rel="noopener noreferrer">
-          {children}
+        <a
+          {...props}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:underline"
+        >
+          <HackerText tag="span">{children}</HackerText>
         </a>
       );
     }
