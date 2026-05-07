@@ -1,6 +1,12 @@
 import type { LaunchpadData } from "~/types";
 
 const launchpadApps: LaunchpadData[] = [
+{
+    id: "d3ward",
+    title: "SCORE YOUR PRIVACY",
+    img: "/img/icons/launchpad/d3ward.png",
+    link: "https://d3ward.com/adblock"
+  },
   {
     id: "flint",
     title: "ABC PRIVACY PROTECTION",
