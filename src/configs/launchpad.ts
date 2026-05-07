@@ -3,9 +3,9 @@ import type { LaunchpadData } from "~/types";
 const launchpadApps: LaunchpadData[] = [
   {
     id: "flint",
-    title: "Flint",
-    img: "/img/icons/launchpad/flint.png",
-    link: "https://github.com/Renovamen/flint"
+    title: "ABC PRIVACY PROTECTION",
+    img: "/img/icons/launchpad/ABC.png",
+    link: "https://abccompanypoharka.github.io/abc.html"
   },
   {
     id: "oh-my-cv",
