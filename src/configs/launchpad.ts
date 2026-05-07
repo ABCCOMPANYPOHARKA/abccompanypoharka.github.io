@@ -9,7 +9,7 @@ const launchpadApps: LaunchpadData[] = [
   },
   {
     id: "oh-my-cv",
-    title: "Oh, My CV!",
+    title: "Cromite Browser",
     img: "/img/icons/launchpad/cromite.png",
     link: "https://github.com/uazo/cromite"
   },
