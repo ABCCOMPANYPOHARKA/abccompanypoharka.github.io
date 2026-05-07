@@ -111,6 +111,13 @@ const Highlighter = (dark: boolean): any => {
       ) : (
         <p {...props}>{children}</p>
       );
+    },
+    a({ node, children, ...props }: any) {
+      return (
+        <a {...props} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
     }
   };
 };
