@@ -1,4 +1,4 @@
-Why We Best In Our Work?
+# Our AIM Is Simple $\color{red}{\text{Protect You}}$ , Protect $\color{green}{\text{Our Humanity}}$
 
-..> We Research, We Plan for you to protect Advertisements, Trackers.
+Use Apps From LaunchPad (From Dock)
  
