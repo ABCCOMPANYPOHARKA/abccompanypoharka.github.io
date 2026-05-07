@@ -113,12 +113,18 @@ const Highlighter = (dark: boolean): any => {
       );
     },
     a({ node, children, ...props }: any) {
+      const { href } = props;
       return (
         <a
           {...props}
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:underline"
+          className="cursor-pointer hover:underline text-red-500 font-bold"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (href) window.open(href, "_blank", "noopener,noreferrer");
+          }}
         >
           <HackerText tag="span">{children}</HackerText>
         </a>
@@ -245,10 +251,7 @@ const Content = ({ contentID, contentURL }: ContentProps) => {
     <div className="markdown w-2/3 mx-auto px-2 py-6 text-c-700">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[
-          rehypeKatex,
-          [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }]
-        ]}
+        rehypePlugins={[rehypeKatex]}
         components={Highlighter(dark as boolean)}
       >
         {storeMd[contentID]}
