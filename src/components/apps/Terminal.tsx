@@ -14,7 +14,7 @@ interface TerminalState {
   content: JSX.Element[];
 }
 
-// rain animation is adopted from: https://codepen.io/P3R0/pen/MwgoKv
+
 const HowDare = ({ setRMRF }: { setRMRF: (value: boolean) => void }) => {
   const FONT_SIZE = 12;
 
@@ -342,7 +342,7 @@ export default class Terminal extends React.Component<{}, TerminalState> {
       <div key={`terminal-input-row-${id}`} flex>
         <div className="w-max hstack space-x-1.5">
           <span text-yellow-200>
-            zou@macbook-pro <span text-green-300>{this.getCurDirName()}</span>
+            godfather@macbook-pro <span text-green-300>{this.getCurDirName()}</span>
           </span>
           <span text-red-400>{">"}</span>
         </div>
