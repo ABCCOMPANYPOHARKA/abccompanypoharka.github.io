@@ -2,17 +2,18 @@ import type { LaunchpadData } from "~/types";
 
 const launchpadApps: LaunchpadData[] = [
 {
+    id: "flint",
+    title: "Privacy & Security Awareness",
+    img: "/img/icons/launchpad/ABC.png",
+    link: "https://abccompanypoharka.github.io/abc.html"
+  },
+{
     id: "d3ward",
     title: "SCORE YOUR PRIVACY",
     img: "/img/icons/launchpad/d3ward.png",
     link: "https://d3ward.com/adblock"
   },
-  {
-    id: "flint",
-    title: "ABC PRIVACY PROTECTION",
-    img: "/img/icons/launchpad/ABC.png",
-    link: "https://abccompanypoharka.github.io/abc.html"
-  },
+  
   {
     id: "oh-my-cv",
     title: "Cromite Browser",
@@ -34,33 +35,33 @@ const launchpadApps: LaunchpadData[] = [
  
   {
     id: "what-if",
-    title: "My Notebook",
-    img: "/img/icons/launchpad/notebook.png",
-    link: "https://note.zxh.io"
+    title: "BlockAds Android",
+    img: "/img/icons/launchpad/blckads.png",
+    link: "https://github.com/pass-with-high-score/blockads-android"
   },
   {
     id: "cube",
-    title: "Cube Solver",
-    img: "/img/icons/launchpad/cube.png",
-    link: "https://cube.zxh.io/"
+    title: "Filter Lists",
+    img: "/img/icons/launchpad/fl.png",
+    link: "https://filterlists.com/"
   },
   {
     id: "resume",
-    title: "Résumé",
-    img: "/img/icons/launchpad/resume.png",
-    link: "https://resume.zxh.io/"
+    title: "Signal",
+    img: "/img/icons/launchpad/signal.png",
+    link: "https://github.com/signalapp"
   },
   {
-    id: "zelda",
-    title: "Webpage for Zelda",
-    img: "/img/icons/launchpad/zelda.png",
-    link: "https://zelda.zxh.io/"
+    id: "adnaus",
+    title: "AdNauseam",
+    img: "/img/icons/launchpad/adnaus.png",
+    link: "https://github.com/dhowe/AdNauseam"
   },
   {
-    id: "fishmail",
-    title: "Fishmail",
-    img: "/img/icons/launchpad/fishmail.png",
-    link: "https://fishmail.vercel.app/"
+    id: "dns",
+    title: "DNS Protection",
+    img: "/img/icons/launchpad/dns.png",
+    link: "https://github.com/hagezi/dns-blocklists"
   }
 ];
 
