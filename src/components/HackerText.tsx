@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const letters = "ABC!@#$%^&*-=ABC/;'\`112698";
+const letters = "ABC!@#$%^&*-=010/;'\`010101";
 
 const extractText = (node: React.ReactNode): string => {
   if (typeof node === "string") return node;
