@@ -1,7 +1,8 @@
 # Why We Best In Our Work?
 
-$\color{lime}{\text{Privacy Is Luxury}}$
-$\color{green}{\text{भवतः गोपनीयतायाः रक्षणं अस्माकं दायित्वम् अस्ति}}$
+$\color{red}{\text{Privacy Is Luxury}}$
+$\color{green}{\text{भवतः गोपनीयतायाः रक्षणं}}$
+$\color{green}{\text{अस्माकं दायित्वम् अस्ति}}$
 
 
 
