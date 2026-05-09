@@ -2,7 +2,7 @@
 
 This site is inspired from many github projects, repo and many other premium apps.. 
 
-# $\color{red}{\text{मंखा चौधरी,}}$
+# $\color{blue}{\text{मंखा चौधरी,}}$
 
 # $\color{red}{\text{अरड़ाट}}$ $\color{green}{\text{पड़ाद्यांगा}}$
 
