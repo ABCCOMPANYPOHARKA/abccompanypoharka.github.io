@@ -4,6 +4,6 @@ This site is inspired from many github projects, repo and many other premium app
 
 # $\color{red}{\text{मंखा चौधरी,}}$
 
-# $\color{red}{\text{अरडाट}}$ $\color{green}{\text{पड़ाद्यांगा}}$
+# $\color{red}{\text{अरड़ाट}}$ $\color{green}{\text{पड़ाद्यांगा}}$
 
 
