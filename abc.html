@@ -684,11 +684,11 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-shield-halved"></i>
-                ABC PRIVACY PROTECTION<i class="fas fa-shield-halved"></i>
+                <span class="hacker-text">ABC PRIVACY PROTECTION</span><i class="fas fa-shield-halved"></i>
             </div>
             <h1>
-                Your <span style="color:lime;">Username</span><br>
-                Is a <span style="color:red;">Weapon</span>
+                Your <span style="color:lime;" class="hacker-text">Username</span><br>
+                Is a <span style="color:red;" class="hacker-text">Weapon</span>
             </h1>
             <p class="hero-subtitle">
                 In 33 seconds, a stranger can find your real Identities, and government ID, just from your social media username. This is the terrifying reality of OSINT-powered doxxing.
@@ -765,7 +765,7 @@
                     <i class="fas fa-crosshairs"></i>
                     The Foundation
                 </div>
-                <h2 class="section-title">What Is OSINT?</h2>
+                <h2 class="section-title hacker-text">What Is OSINT?</h2>
                 <p class="section-desc">
                     Open Source Intelligence isn't hacking. It's worse, because it doesn't break any laws, yet it can destroy your life.
                 </b>
@@ -821,7 +821,7 @@
                     <i class="fas fa-microchip"></i>
                     The Mechanism
                 </div>
-                <h2 class="section-title">How Doxxing Bots Work</h2>
+                <h2 class="section-title hacker-text">How Doxxing Bots Work</h2>
                 <p class="section-desc">
                     Understanding the machine helps you understand why you're vulnerable, and why traditional privacy advice often fails.
                 </b>
@@ -903,7 +903,7 @@
                     <i class="fas fa-skull-crossbones"></i>
                     The Human Cost
                 </div>
-                <h2 class="section-title">The Real Damage of Doxxing</h2>
+                <h2 class="section-title hacker-text">The Real Damage of Doxxing</h2>
                 <p class="section-desc">
                     Doxxing isn't just about someone knowing where you live. It's about power, control, and psychological warfare that can destroy lives permanently.
                 </b>
@@ -978,7 +978,7 @@
                     <i class="fas fa-lock-open"></i>
                     The System
                 </div>
-                <h2 class="section-title">Why This Is So Hard to Stop</h2>
+                <h2 class="section-title hacker-text">Why This Is So Hard to Stop</h2>
                 <p class="section-desc">
                     You might wonder why governments don't just shut these bots down. The answer is complicated, and deeply frustrating.
                 </b>
@@ -1018,7 +1018,7 @@
                     <i class="fas fa-shield-halved"></i>
                     Defense
                 </div>
-                <h2 class="section-title">How to Protect Yourself</h2>
+                <h2 class="section-title hacker-text">How to Protect Yourself</h2>
                 <p class="section-desc">
                     While you cannot completely erase your digital footprint, you can significantly reduce your exposure and make yourself a much harder target.
                 </b>
@@ -1152,7 +1152,7 @@ This is exactly what I meant earlier when I talked about puzzles. OSINT is like 
                     <i class="fas fa-earth-americas"></i>
                     The Bigger Picture
                 </div>
-                <h2 class="section-title">Why This Matters for Everyone</h2>
+                <h2 class="section-title hacker-text">Why This Matters for Everyone</h2>
                 <p class="section-desc">
                     This isn't just about individual safety. It's about the future of trust, equality, and freedom in the digital age.
                 </b>
@@ -1236,6 +1236,45 @@ This is exactly what I meant earlier when I talked about puzzles. OSINT is like 
                 nav.style.background = 'rgba(248, 249, 250, 0.95)';
             } else {
                 nav.style.background = 'rgba(248, 249, 250, 0.85)';
+            }
+        });
+
+        
+        const letters = "!@#$%^&*()[]{}\|;<>/010010";
+        
+        const runHackerEffect = (element) => {
+            let iteration = 0;
+            const originalText = element.dataset.value || element.innerText;
+            if (!element.dataset.value) element.dataset.value = originalText;
+            
+            clearInterval(element.hackerInterval);
+            
+            element.hackerInterval = setInterval(() => {
+                element.innerText = originalText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return element.dataset.value[index];
+                        }
+                        if (originalText[index] === " ") return " ";
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+                
+                if (iteration >= originalText.length) {
+                    clearInterval(element.hackerInterval);
+                    element.innerText = originalText;
+                }
+                
+                iteration += 1 / 3;
+            }, 30);
+        };
+
+        document.querySelectorAll('.hacker-text').forEach(el => {
+            el.addEventListener('mouseenter', () => runHackerEffect(el));
+            // Run once on load if it's in the hero
+            if (el.closest('.hero')) {
+                setTimeout(() => runHackerEffect(el), 500);
             }
         });
     </script>
